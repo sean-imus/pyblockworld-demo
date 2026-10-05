@@ -13,7 +13,7 @@ class Wall:
     def build(self) -> None:
         x, y, z = self.pos
         if self.rotated:
-            # Rotated wall spans z-axis instead of x-axis
+            # Rotated wall spans z-axis
             self.bw.setBlocks(
                 x,
                 y,
