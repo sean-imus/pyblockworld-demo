@@ -15,23 +15,8 @@ class Wall:
         # setBlocks bounds are inclusive, so end coordinates need width/height minus one
         if self.rotated:
             # Rotated wall spans z-axis
-            self.bw.setBlocks(
-                x,
-                y,
-                z,
-                x,
-                y + self.height - 1,
-                z + self.width - 1,
-                self.material_id,
-            )
+            x2, z2 = x, z + self.width - 1
         else:
             # Unrotated wall spans x-axis
-            self.bw.setBlocks(
-                x,
-                y,
-                z,
-                x + self.width - 1,
-                y + self.height - 1,
-                z,
-                self.material_id,
-            )
+            x2, z2 = x + self.width - 1, z
+        self.bw.setBlocks(x, y, z, x2, y + self.height - 1, z2, self.material_id)
