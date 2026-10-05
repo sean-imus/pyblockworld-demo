@@ -1,0 +1,26 @@
+[project]
+name = "pyblockworld-demo"
+version = "1.0.0"
+readme = "README.md"
+authors = [
+    { name = "Sean Tietz", email = "sean.tietz2@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "pyblockworld>=0.3.8.2",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.6.2",
+    "ruff>=0.16.10",
+]
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "COM812",
+    "ISC001",
+    "CPY001",
+    "D",
+]
