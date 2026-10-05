@@ -8,7 +8,7 @@ class Wall:
         self.height = 5
         self.rotated = False
         self.material_id = "default:stone"
-        self.bw = bw
+        self._bw = bw
 
     def build(self) -> None:
         x, y, z = self.pos
@@ -19,7 +19,7 @@ class Wall:
         else:
             # Unrotated wall spans x-axis
             x2, z2 = x + self.width - 1, z
-        self.bw.setBlocks(x, y, z, x2, y + self.height - 1, z2, self.material_id)
+        self._bw.setBlocks(x, y, z, x2, y + self.height - 1, z2, self.material_id)
 
 
 class WallWithWindow(Wall):
@@ -32,9 +32,13 @@ class WallWithWindow(Wall):
         # Window hole: two blocks wide and high, centered in the wall plane
         x, y, z = self.pos
         if self.rotated:
-            self.bw.setBlocks(x, y + 1, z + 2, x, y + 2, z + 3, self.window_material_id)
+            self._bw.setBlocks(
+                x, y + 1, z + 2, x, y + 2, z + 3, self.window_material_id
+            )
         else:
-            self.bw.setBlocks(x + 2, y + 1, z, x + 3, y + 2, z, self.window_material_id)
+            self._bw.setBlocks(
+                x + 2, y + 1, z, x + 3, y + 2, z, self.window_material_id
+            )
 
 
 class WallWithDoor(Wall):
@@ -47,6 +51,6 @@ class WallWithDoor(Wall):
         # Door hole: two blocks wide and high, centered at ground level
         x, y, z = self.pos
         if self.rotated:
-            self.bw.setBlocks(x, y, z + 2, x, y + 1, z + 3, self.door_material_id)
+            self._bw.setBlocks(x, y, z + 2, x, y + 1, z + 3, self.door_material_id)
         else:
-            self.bw.setBlocks(x + 2, y, z, x + 3, y + 1, z, self.door_material_id)
+            self._bw.setBlocks(x + 2, y, z, x + 3, y + 1, z, self.door_material_id)
