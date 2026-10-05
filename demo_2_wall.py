@@ -11,11 +11,14 @@ def b_pressed(bw: World) -> None:
     # Player position reports one block too high for placement
     y -= 1
 
+    # Offset x so builds don't spawn inside the player
+    x += 2
+
     # Unrotated wall in front of the player
-    wall_front = Wall((x + 2, y, z), bw)
+    wall_front = Wall((x, y, z), bw)
 
     # Rotated wall to the side so both are visible
-    wall_side = Wall((x + 10, y, z), bw)
+    wall_side = Wall((x + 8, y, z), bw)
     wall_side.rotated = True
 
     # Place both walls
