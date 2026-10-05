@@ -18,6 +18,7 @@ def b_pressed(bw: World) -> None:
     wall_front = Wall((x, y, z), bw)
 
     # Rotated wall to the side so both are visible
+    # x + 8 = first wall width (6) plus a two-block gap
     wall_side = Wall((x + 8, y, z), bw)
     wall_side.rotated = True
 
