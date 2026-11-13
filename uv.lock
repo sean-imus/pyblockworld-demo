@@ -1,0 +1,58 @@
+version = 1
+revision = 5
+requires-python = ">=3.12"
+resolution-markers = [
+    "python_full_version >= '3.13'",
+    "python_full_version < '3.13'",
+]
+
+[[package]]
+name = "pyblockworld"
+version = "0.3.8.2"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version < '3.13'",
+]
+dependencies = [
+    { name = "pyglet" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ed/04/199d2b1821fa742c34dbe8e7a30676a686694f93baf46c4e3931786af262/pyblockworld-0.3.8.2.tar.gz", hash = "sha256:7150d205208d82b974a6204b5c6bcd2a663aeee6897d7a96e79e7bda2f9fb00e", size = 17378, upload-time = "2023-09-13T08:15:32.935Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/9f/00/ea9795818028092b436d1d7f7b6641c0aa0e8d89e4dd66685c23236a4a51/pyblockworld-0.3.8.2-py3-none-any.whl", hash = "sha256:4aa4cd1e62efdeb1c819bcff4c7bef6671a1e114ef31ac4f7d91d39e7c0ac056", size = 16524, upload-time = "2023-09-13T08:15:31.754Z" },
+]
+
+[[package]]
+name = "pyblockworld"
+version = "0.3.10"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version >= '3.13'",
+]
+dependencies = [
+    { name = "pyglet" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/21/3f/f0e11562f404abd0502115580e7355120b175cb304501e3ed8fa0bac2e64/pyblockworld-0.3.10.tar.gz", hash = "sha256:ecf850666a66c5da1b6c58b330b7144c00a653893a3343cc6f2edbc05e47d311", size = 17303, upload-time = "2025-10-26T14:52:02.167Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e3/2c/2758749a64720b3855763f9cd52488988a1c509b53890ef7b9d40b38dcaf/pyblockworld-0.3.10-py3-none-any.whl", hash = "sha256:e9f3925674c2b50c062eb9cf752769492d72ac720f6b2cca37169fe7ee0bdc0e", size = 16596, upload-time = "2025-10-26T14:52:01.162Z" },
+]
+
+[[package]]
+name = "pyblockworld-demo"
+version = "1.0.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "pyblockworld", version = "0.3.8.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.13'" },
+    { name = "pyblockworld", version = "0.3.10", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.13'" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "pyblockworld", specifier = ">=0.3.8.2" }]
+
+[[package]]
+name = "pyglet"
+version = "1.5.31"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/f7/c0/59130a7edbcc8f84e35870b00a712538ca05415ff02d17181277b8ef8f05/pyglet-1.5.31.zip", hash = "sha256:a5e422b4c27b0fc99e92103bf493109cca5c18143583b868b3b4631a98ae9417", size = 6900712, upload-time = "2024-12-24T07:10:58.022Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e2/43/46aa0ab49f2f5145d201780c7595cf0c305fb4fb5d00d6639792a3d0e770/pyglet-1.5.31-py3-none-any.whl", hash = "sha256:f68413564bbec380e4815898fef0fb7a4a494dc3f8718bfbf28ce2a802634c88", size = 1143660, upload-time = "2024-12-24T07:10:50.769Z" },
+]
